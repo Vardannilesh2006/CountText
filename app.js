@@ -1240,3 +1240,70 @@ function closeModalOnOuterClick(event, modalId) {
     closeModal(modalId);
   }
 }
+
+// --- Contact Form Submission Handler ---
+function handleContactSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const submitBtn = document.getElementById("contact-submit-btn");
+  const statusMsg = document.getElementById("contact-status-msg");
+  
+  const nameVal = document.getElementById("contact-name").value.trim();
+  const emailVal = document.getElementById("contact-email").value.trim();
+  const messageVal = document.getElementById("contact-message").value.trim();
+  
+  if (!nameVal || !emailVal || !messageVal) {
+    statusMsg.style.display = "block";
+    statusMsg.style.backgroundColor = "rgba(239, 68, 68, 0.15)";
+    statusMsg.style.color = "var(--danger)";
+    statusMsg.style.border = "1px solid var(--danger)";
+    statusMsg.textContent = "Please fill in all fields.";
+    return;
+  }
+  
+  submitBtn.disabled = true;
+  const originalBtnText = submitBtn.textContent;
+  submitBtn.textContent = "Sending...";
+  
+  statusMsg.style.display = "none";
+  
+  fetch("https://formsubmit.co/ajax/nileshverma99731@gmail.com", {
+    method: "POST",
+    headers: { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      name: nameVal,
+      email: emailVal,
+      message: messageVal,
+      _subject: "New Contact Message from CountText User"
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error("Network response was not ok.");
+  })
+  .then(data => {
+    statusMsg.style.display = "block";
+    statusMsg.style.backgroundColor = "rgba(16, 185, 129, 0.15)";
+    statusMsg.style.color = "var(--success)";
+    statusMsg.style.border = "1px solid var(--success)";
+    statusMsg.textContent = "Thank you! Your message has been sent successfully.";
+    form.reset();
+  })
+  .catch(error => {
+    statusMsg.style.display = "block";
+    statusMsg.style.backgroundColor = "rgba(239, 68, 68, 0.15)";
+    statusMsg.style.color = "var(--danger)";
+    statusMsg.style.border = "1px solid var(--danger)";
+    statusMsg.textContent = "Oops! Something went wrong. Please try again later.";
+    console.error("FormSubmit Error:", error);
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalBtnText;
+  });
+}
