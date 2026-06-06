@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Counter for X/Twitter: Post, Thread & Bio Limits</title>
+  <meta name="description" content="Optimize tweets for X (Twitter). Deep dive into character limits, bio constraints, handle rules, and threads formatting best practices.">
+  <meta name="keywords" content="twitter character counter, x character limit, tweet limit, twitter bio limit">
+  
+  <link rel="canonical" href="https://vardannilesh2006.github.io/CountText/blog/character-counter-for-twitter.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vardannilesh2006.github.io/CountText/blog/character-counter-for-twitter.html">
+  <meta property="og:title" content="Character Counter for X/Twitter: Post, Thread & Bio Limits">
+  <meta property="og:description" content="Complete guide to X / Twitter character limits, handles, bios, and thread writing.">
+  <meta property="og:image" content="https://vardannilesh2006.github.io/CountText/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../logo.svg">
+  <link rel="stylesheet" href="../styles.css?v=6.0">
+
+  <style>
+    .article-layout { display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; margin-top: 20px; margin-bottom: 50px; }
+    .article-main { background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: var(--radius-lg); padding: 35px; box-shadow: var(--card-shadow); backdrop-filter: blur(16px); box-sizing: border-box; }
+    .article-meta { display: flex; gap: 16px; font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 20px; border-bottom: 1px solid var(--panel-border); padding-bottom: 12px; }
+    .article-tag { color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.5px; }
+    .article-main h1 { font-family: var(--font-family-title); font-size: 32px; font-weight: 800; line-height: 1.25; color: var(--text-primary); margin-bottom: 20px; }
+    .article-content { font-size: 15px; line-height: 1.75; color: var(--text-secondary); }
+    .article-content h2 { font-family: var(--font-family-title); font-size: 22px; font-weight: 700; color: var(--text-primary); margin-top: 30px; margin-bottom: 12px; }
+    .article-content p { margin-bottom: 16px; }
+    .article-content ul { margin-bottom: 16px; padding-left: 20px; }
+    .article-content li { margin-bottom: 8px; }
+    .article-sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-widget { background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--card-shadow); backdrop-filter: blur(16px); box-sizing: border-box; }
+    .widget-title { font-family: var(--font-family-title); font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; border-bottom: 1px solid var(--panel-border); padding-bottom: 8px; }
+    .widget-link { font-size: 13.5px; color: var(--text-secondary); text-decoration: none; transition: color var(--transition-fast); }
+    .widget-link:hover { color: var(--accent-primary); }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; width: 100%; background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-hover) 100%); color: white; text-decoration: none; font-weight: 600; padding: 12px; border-radius: var(--radius-sm); margin-top: 10px; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25); transition: transform var(--transition-fast); }
+    .cta-button:hover { transform: translateY(-2px); }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Character Counter for X/Twitter: Post, Thread & Bio Limits",
+    "image": "https://vardannilesh2006.github.io/CountText/logo.svg",
+    "genre": "Social Media Marketing",
+    "keywords": "twitter character count, tweet limit 280, x post limits",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CountText",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://vardannilesh2006.github.io/CountText/logo.svg"
+      }
+    },
+    "url": "https://vardannilesh2006.github.io/CountText/blog/character-counter-for-twitter.html",
+    "datePublished": "2026-06-06",
+    "author": {
+      "@type": "Person",
+      "name": "CountText Content Team"
+    },
+    "description": "Master Twitter (X) limits: 280 characters for standard users, handles constraints, bio setups, and formatting links correctly."
+  }
+  </script>
+</head>
+<body>
+
+  <div class="app-container">
+    <header class="app-header">
+      <a href="../" class="logo-container">
+        <img src="../logo.svg" class="logo-graphic" alt="CountText Logo">
+        <span class="site-title">CountText</span>
+      </a>
+      <nav class="nav-tabs">
+        <a class="tab-btn" href="../">Dashboard</a>
+        <a class="tab-btn active" href="index.html">Blog</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="theme-icon-sun" style="display:none;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M5.22 5.22l1.59 1.59m10.38 10.38l1.59 1.59M12 6.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5ZM3 12h2.25m13.5 0H21M5.22 18.78l1.59-1.59m10.38-10.38l1.59-1.59" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="theme-icon-moon"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="article-layout">
+      <main class="article-main">
+        <div class="article-meta">
+          <span class="article-tag">Twitter / X</span>
+          <span>Updated June 2026</span>
+          <span>4 Min Read</span>
+        </div>
+
+        <h1>Character Counter for X/Twitter: Post, Thread & Bio Limits</h1>
+
+        <div class="article-content">
+          <p>X (formerly Twitter) is a microblogging platform built on brief, fast-paced, and concise text exchange. Managing character space is the core element of drafting a viral tweet. Let's cover the essential limits of X today.</p>
+
+          <h2>Summary of X/Twitter Text Limits</h2>
+          <ul>
+            <li><strong>Standard Post (Free Accounts):</strong> 280 characters.</li>
+            <li><strong>Premium Account Posts:</strong> Up to 25,000 characters.</li>
+            <li><strong>Bio Section:</strong> Max 160 characters.</li>
+            <li><strong>Username (Handle):</strong> Max 15 characters.</li>
+            <li><strong>Display Name:</strong> Max 50 characters.</li>
+            <li><strong>Direct Message (DM):</strong> Max 10,000 characters.</li>
+          </ul>
+
+          <h2>Understanding the 280-Character Rule</h2>
+          <p>The standard post limit is **280 characters** for most accounts. However, it is crucial to remember that not all characters count equally in Twitter's API. For example, any link (URL) counts as exactly **23 characters**, regardless of its actual length. Emojis also count as 2 characters under specific Unicode rules.</p>
+          
+          <h2>Threads & Bio Limits</h2>
+          <p>If your post exceeds 280 characters, you can either upgrade to X Premium or split your draft into a **Thread**. A thread keeps readers engaged, but it is vital to number your posts (e.g., "1/5", "2/5") to maintain flow. Additionally, your Profile Bio is strictly capped at **160 characters**, so keep your self-introduction punchy.</p>
+        </div>
+      </main>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-widget">
+          <a href="index.html" class="widget-link" style="font-weight:700; display:flex; align-items:center; gap:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" /></svg>
+            Back to All Articles
+          </a>
+        </div>
+        <div class="sidebar-widget" style="text-align: center;">
+          <h3 class="widget-title">Check Twitter Preview</h3>
+          <p style="font-size:13px; color:var(--text-secondary); margin-bottom:12px;">Draft tweets and visually check the exact progress ring indicator as you type.</p>
+          <a href="../" class="cta-button">Open Twitter Simulator</a>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="app-footer">
+      <div class="footer-copy">&copy; 2026 CountText. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="../" class="footer-link">Dashboard</a>
+        <a href="index.html" class="footer-link">Blog Home</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const sunIcon = document.querySelector(".theme-icon-sun");
+    const moonIcon = document.querySelector(".theme-icon-moon");
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    updateThemeIcons(savedTheme);
+    themeToggleBtn.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      updateThemeIcons(newTheme);
+    });
+    function updateThemeIcons(theme) {
+      if (theme === "dark") { sunIcon.style.display = "block"; moonIcon.style.display = "none"; }
+      else { sunIcon.style.display = "none"; moonIcon.style.display = "block"; }
+    }
+  </script>
+</body>
+</html>
