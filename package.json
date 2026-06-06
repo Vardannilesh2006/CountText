@@ -1,0 +1,17 @@
+{
+  "name": "counttext",
+  "version": "1.0.0",
+  "description": "CountText - Premium Character Counter & Social Preview Suite",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8080"
+  },
+  "keywords": [
+    "character-counter",
+    "word-counter",
+    "seo-preview",
+    "social-preview"
+  ],
+  "author": "CountText Team",
+  "license": "MIT"
+}
